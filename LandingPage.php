@@ -11,7 +11,8 @@ if(isset($_GET['id']) and $_GET['id']>0){
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style/styleLanding.css">
-	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
 

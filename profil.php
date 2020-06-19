@@ -5,7 +5,10 @@ session_start();
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 </head>
 <body>
 	<?php require("header.php")  ?>
@@ -16,7 +19,7 @@ session_start();
 		$donnees=$image->fetch();
   ?>
   <br>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div class="col-sm-12 col-lg-4 col-md-12 " style="text-align: center;">
       <div class="card card-profile" style="background-color:snow;">
@@ -133,7 +136,16 @@ session_start();
   </div>
 </div>
 
-
+<div class="container-fluid">
+  <div class="row">
+    <form>
+      <label>Prenom</label>
+      <input type="text">
+      <label>Nom</label>
+      <input type="text">
+    </form>
+  </div>
+</div>
 
 
 

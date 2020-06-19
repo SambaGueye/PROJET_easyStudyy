@@ -3,14 +3,17 @@
 <head>
 	<title>Inscription</title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
 
 <?php require("header.php") ?>
-
-<div class="container">
-	<div class="row">
-		<form method="post" id="formulaire">
+<br>
+<div class="container" style="background-color:cornsilk" id="fo">
+	<div class="row" >
+		<div class="col-sm-12 col-lg-4">
+		<form method="post" id="formulaire" >
 			<div class="form-group">
 		    <label for="exampleInputPassword1">Prenom</label>
 		    <input type="text" class="form-control" id="exampleInputPassword1" name="prenom">
@@ -30,6 +33,7 @@
 		  </div>
 		  <button type="submit" class="btn btn-primary" name="inscrire">S'inscrire</button>
 		</form>
+		</div>
 	</div>
 </div>
 
@@ -53,6 +57,12 @@ if(isset($_POST['inscrire'])){
 
 ?>
 
+<style>
+	#fo{
+		text-align: center;
+		color: red;
+	}
+</style>
 
 </body>
 </html>
