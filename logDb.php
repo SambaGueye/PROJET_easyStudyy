@@ -1,5 +1,5 @@
 <?php
 
-$dbb = new PDO('mysql:host=localhost; dbname=projet', 'root', '');
+$dbb = new PDO('mysql:host=localhost; dbname=easystudy', 'root', '');
 
 ?>

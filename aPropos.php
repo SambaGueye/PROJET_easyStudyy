@@ -4,6 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style/styleLanding.css">
+	<link rel="stylesheet" type="text/css" href="style/teamDev.css">
 	
 </head>
 <body>
@@ -84,44 +85,154 @@
 						  </div>
 						</div><br>
 			  		</div>
-			  		<div class="col-sm">
-			  			<div class="card" style="width: 18rem; border-left: 2px solid red;">
-						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
-						    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    <a href="#" class="card-link">Card link</a>
-						    <a href="#" class="card-link">Another link</a>
-						  </div>
-						</div><br>
-			  		</div>
-			  		<div class="col-sm">
-			  			<div class="card" style="width: 18rem; border-left: 2px solid red;">
-						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
-						    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    <a href="#" class="card-link">Card link</a>
-						    <a href="#" class="card-link">Another link</a>
-						  </div>
-						</div><br>
-			  		</div>
-			  		<div class="col-sm">
-			  			<div class="card" style="width: 18rem; border-left: 2px solid red;">
-						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
-						    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    <a href="#" class="card-link">Card link</a>
-						    <a href="#" class="card-link">Another link</a>
-						  </div>
-						</div>
-			  		</div>
 			  	</div>
 			  
 			</div>
 		</div>
 	</div>
+
+<!--Equipe développeur -->
+<!-- Team -->
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 class="section-title h1">OUR TEAM</h5>
+        <div class="row">
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" >
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="images/samba.jpeg" alt="card image"></p>
+                                    <h4 class="card-title">Samba GUEYE</h4>
+                                    <p class="card-text">Full Stack Developer</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Samba GUEYE</h4>
+                                    <p class="card-text">Étudiant en Licence 2 MIASHS parcours MIAGE. J'occupe le poste de développeur Full-Stack dans ce projet.</p>
+                                    <p>E-mail: sambahathagueyee@gmail.com</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="images/sophia.jpeg" alt="card image"></p>
+                                    <h4 class="card-title">Sophia NACHIN</h4>
+                                    <p class="card-text">Full-Stack Developer</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Sophia NACHIN</h4>
+                                    <p class="card-text">Étudiante en Licence 2 MIASHS parcours MIAGE. J'occupe le poste de développeur Full-Stack dans ce projet.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="images/filiz.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Filiz KARA</h4>
+                                    <p class="card-text">Full-Stack Developer</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Filiz KARA</h4>
+                                    <p class="card-text">Étudiante en Licence 3 MIAGE et titulaire d'un DUT Informatique. J'occupe le poste de développeur Full-Stack dans ce projet.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+        </div>
+    </div>
+</section>
+<!-- Team -->
+
+<!-- Fin équipe dev -->
 
 	<div class="container">
 	  <div class="row">

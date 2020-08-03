@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-	<?php require("header.php") ?>
+<?php require("header.php") ?>
 
 	<div class="container" style="background-color:white" id="fo">
 		<!--<div class="row" >
@@ -114,7 +114,7 @@
 
 
 	mysqli_close($conn);
-	?>
+?>
 
 	<style>
 		body{

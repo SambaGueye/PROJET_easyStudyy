@@ -10,11 +10,13 @@ $idd=$_SESSION['id'];
 	<link rel="stylesheet" type="text/css" href="style/edtStyle.css">
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
 </head>
 <body>
 	<?php require("header.php") ?>
 	<?php
-	$dbb= new PDO('mysql:host=localhost; dbname=projet', 'root', ''); 
+	//$dbb= new PDO('mysql:host=localhost; dbname=projet', 'root', ''); 
+	require_once('logDb.php');
 
 	if(isset($_POST['sub'])){
 		$nomT=$_POST['nomT'];
@@ -83,7 +85,6 @@ if(isset($_GET['del_task'])){
 	}
 ?>
 </div>
-
 
 <!-- Affichage de la Todo-List -->
 

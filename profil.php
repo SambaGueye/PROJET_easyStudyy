@@ -1,5 +1,6 @@
 <?php
 session_start(); 
+$idd=$_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,8 +14,7 @@ session_start();
 <body>
 	<?php require("header.php")  ?>
 	<?php 
-		$idd= $_SESSION['id'];
-		$dbb= new PDO('mysql:host=localhost; dbname=projet', 'root', ''); 
+		require_once('logDb.php');
 		$image=$dbb->query("SELECT avatar from membre where idUser=$idd");
 		$donnees=$image->fetch();
   ?>
@@ -25,8 +25,8 @@ session_start();
       <div class="card card-profile" style="background-color:snow;">
           <div class="card-avatar">
             <a href="javascript:;">
-                <?php if(!empty($donnees['avatar'])) { ?>
-                <img src="membres/profil/<?php echo $donnees['avatar'] ?>" width="150px" style="border-radius: 150px"> <?php } ?><br><br>
+                <?php if(!empty($donnees['avatar']) && $donnees['avatar']!='default') { ?>
+                <img src="membres/profil/<?php echo $donnees['avatar'] ?>" width="150px" style="border-radius: 150px"><?php } ?><br><br>
               </a>
           </div>
           <div class="card-body" >
@@ -58,8 +58,8 @@ session_start();
           <div class="row">
             <div class="col-md-5">
               <div class="form-group">
-                <label class="bmd-label-floating">Company (disabled)</label>
-                <input type="text" class="form-control" disabled>
+                <label class="bmd-label-floating">Phone number</label>
+                <input type="text" class="form-control">
               </div>
             </div>
               <div class="col-md-3">
@@ -136,19 +136,17 @@ session_start();
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <form>
-      <label>Prenom</label>
-      <input type="text">
-      <label>Nom</label>
-      <input type="text">
-    </form>
-  </div>
-</div>
 
 
 
+
+<style>
+  body {
+    background-image: url("images/bgProfil.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
