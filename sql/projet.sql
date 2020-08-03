@@ -112,3 +112,13 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+--MODIFIICATION DE LA TABLE 'MEMBRE' (20/07/2020)
+ALTER TABLE `membre` ADD `niveau` varchar(4);
+ALTER TABLE `membre` ADD CHECK (`niveau` in ('L1', 'L2', 'L3', 'M1', 'M2'));
+ALTER TABLE `membre` ADD `formation` varchar(50);
+ALTER TABLE `membre` ADD CHECK (`formation` in ('Chimie','Physique','CUPGE','Mécanique','Info', 'MIASHS', 'Génie Civil', 'science de la terre', 'Science de la vie', 'STAPS', 'Information-Communication', 'Sciences sociales(Gestion)'));
+ALTER TABLE `membre` ADD `statut` varchar(11);
+ALTER TABLE `membre` ADD CHECK (`statut` in ('etudiant', 'professeur', 'admin'));

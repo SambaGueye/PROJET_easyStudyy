@@ -1,21 +1,21 @@
 <?php 
-session_start();
+	session_start();
 
-if(isset($_GET['id']) and $_GET['id']>0){
-	if(isset($_SESSION['id']) and $_GET['id'] == $_SESSION['id']){
 
-?>
+	if(isset($_GET['id']) and $_GET['id']>0){
+		if(isset($_SESSION['id']) and $_GET['id'] == $_SESSION['id']){
+?>	
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style/styleLanding.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-
 	<?php require("header.php") ?>
 
 	<div class="container">
@@ -60,6 +60,8 @@ if(isset($_GET['id']) and $_GET['id']>0){
 		  </a>
 		</div>
 	</div>
+
+	<?php require("footer.php"); ?>
 
 </body>
 </html>
