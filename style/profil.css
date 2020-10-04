@@ -1,0 +1,21 @@
+#photoo {
+    width: 8em; height:8em;
+    margin-top: 2em;
+    border: 3px solid red;
+}
+
+#icone {
+    text-align: center;
+}
+
+
+#ic {
+    font-size: 2em;
+    color: black;
+}
+
+#mainProfil {
+    background-image: url(../images/bg.jpg);
+    background-color: red;
+}
+

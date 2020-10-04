@@ -30,9 +30,10 @@
       $mail=htmlentities(strtolower(trim($_POST['mail'])));
       $password=trim($_POST['password']);
       $repeatpassword=trim($_POST['repeatpassword']);
-      $avatar="NULL";
-      $niveau="NULL";
-      $formation="NULL";
+      //$avatar="NULL";
+      //$niveau="NULL";
+      //$formation="NULL";
+    
 
       if (!empty($prenom) && !empty($nom) && !empty($mail) && !empty($password) && !empty($repeatpassword))
       {
@@ -58,18 +59,17 @@
 
         if ($password!=$repeatpassword)
         {
-          $errors['repeatpassword'] = "La confirmation du mot de passe ne correspond pas.";
+          $errors['repeatpassword'] = "Les mots de passe ne correspond pas.";
         }
 
         // Si toutes les conditions sont remplies alors on fait le traitement
         if(empty($errors))
         {
           $password = md5($password);
-          $request = $pdo->prepare("INSERT INTO membre (prenom, nom, email, password, avatar, niveau, formation, statut)
-                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+          $request = $pdo->prepare("INSERT INTO membre (prenom, nom, email, password, statut)
+                                    VALUES (?, ?, ?, ?, ?)");
 
-          $res=$request->execute([$nom, $prenom, $mail, $password, $avatar, $niveau, $formation,  'professeur']);
-
+          $res=$request->execute([$prenom, $nom, $mail, $password, "professeur"]);
             header('location: connexion.php');
             exit;
         }

@@ -65,11 +65,10 @@
         if(empty($errors))
         {
           $password = md5($password);
-          $request = $pdo->prepare("INSERT INTO membre (prenom, nom, email, password, avatar, niveau, formation, statut)
-                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-
-          $request->execute([$nom, $prenom, $mail, $password, $avatar, $niveau, $formation, 'etudiant']);
-
+          $request = $pdo->prepare("INSERT INTO membre (prenom, nom, email, password, niveau, formation, statut)
+                                    VALUES (?, ?, ?, ?, ?, ?, ?)");
+          $res = $request->execute([$prenom, $nom, $mail, $password, $niveau, $formation, "etudiant"]);
+          var_dump($res);
           header('location: connexion.php');
           exit;
         }

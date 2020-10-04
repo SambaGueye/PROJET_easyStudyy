@@ -10,29 +10,30 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style/styleLanding.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="./style/LandingPage.css">
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
 	<?php require("header.php") ?>
-
-	<div class="container">
-		<div class="row" >
-			<div class="col-sm-12 col-md-12 col-lg-12">
-			<div class="jumbotron" style="border-left: 2px solid red" >
-			  <h1 class="display-4">Hello, Bienvenu dans votre espace d'échange</h1>
-			  <p class="lead">Le but de ce site est de vous simplifier votre vie d'étudiant en vous proposants diverses rubriques</p>
-			  <hr class="my-4">
-			  <p>Notre objectif, c'est vous aider à mieux gérer votre temps</p>
-			  <a class="btn btn-primary btn-lg" href="aPropos.php" role="button">En savoir plus</a>
-			</div>
+<div>	
+	<div class="headLanding" >
+		<div class="container">
+			<div class="row" >
+				<div class="col-sm-12 col-lg-6" id="firstPart">
+					<h1 class="display-4">Hello, Bienvenu dans votre espace d'échange</h1>
+					<p class="lead">Le but de ce site est de vous simplifier votre vie d'étudiant en vous proposants diverses rubriques</p>
+					<p>Notre objectif, c'est vous aider à mieux gérer votre temps</p>
+				</div>
+				<div class="col-sm-12 col-lg-6">
+					<p>kbnsk</p>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" >
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -60,6 +61,7 @@
 		  </a>
 		</div>
 	</div>
+</div>
 
 	<?php require("footer.php"); ?>
 
