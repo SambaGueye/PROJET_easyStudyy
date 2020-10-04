@@ -1,11 +1,11 @@
 <?php  
   require("fonctions.php"); 
-  session_start();
+  /*session_start();
   // S'il y a une session alors on ne retourne plus sur cette page
   if (isset($_SESSION['id'])){
       header('Location: LandingPage.php'); 
       exit;
-  }
+  }*/
   $pdo= new PDO('mysql:host=localhost; dbname=easystudy', 'root', ''); 
 ?>
 <!DOCTYPE html>

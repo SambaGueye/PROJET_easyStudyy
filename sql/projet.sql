@@ -122,3 +122,25 @@ ALTER TABLE `membre` ADD `formation` varchar(50);
 ALTER TABLE `membre` ADD CHECK (`formation` in ('Chimie','Physique','CUPGE','Mécanique','Info', 'MIASHS', 'Génie Civil', 'science de la terre', 'Science de la vie', 'STAPS', 'Information-Communication', 'Sciences sociales(Gestion)'));
 ALTER TABLE `membre` ADD `statut` varchar(11);
 ALTER TABLE `membre` ADD CHECK (`statut` in ('etudiant', 'professeur', 'admin'));
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Annonces`
+--
+
+CREATE TABLE annonces (
+	idAnnonce int(255) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	titre VARCHAR(255) NOT NULL,
+	description VARCHAR(1000) NOT NULL,
+	niveau VARCHAR(4) NOT NULL,
+	dateEtHeure DATETIME NOT NULL,
+	idUser int(255) NOT NULL,
+	CONSTRAINT fk_Annonces_Membre FOREIGN KEY (idUser) REFERENCES membre(idUser),
+	CHECK (niveau in ('L1', 'L2', 'L3', 'M1', 'M2'))
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO Annonces VALUES
+(1, 'Rapport IHM ', 'J''aimerai terminer la liste de taches utilisateurs avec qlq''un si possible', 'L3', CURRENT_TIMESTAMP  , 1);
