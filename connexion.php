@@ -36,6 +36,9 @@
           $_SESSION['prenom']=$userinfo['prenom'];
           $_SESSION['nom']=$userinfo['nom'];
           $_SESSION['mail']=$userinfo['email'];
+          $_SESSION['formation']=$userinfo['formation'];
+          $_SESSION['niveau']=$userinfo['niveau'];
+          $_SESSION['statut']=$userinfo['statut'];
 
           header("location: LandingPage.php?id=".$_SESSION['id']);
         } 

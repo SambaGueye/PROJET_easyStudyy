@@ -12,8 +12,8 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style/styleLanding.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="./style/LandingPage.css">
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
@@ -106,7 +106,7 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" >
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -134,6 +134,7 @@
 		  </a>
 		</div>
 	</div>
+</div>
 
 	<div class="container">
 		<nav aria-label="breadcrumb">

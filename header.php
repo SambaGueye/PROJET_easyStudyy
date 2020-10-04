@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">EasyStudies</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,6 +47,10 @@
     </ul>
   </div>
 </nav>
+=======
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar" >
+    <a class="navbar-brand" href="#">EasyStudy</a>
+>>>>>>> d71398ca8e865a038e870ae8063894a080fd82db
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
