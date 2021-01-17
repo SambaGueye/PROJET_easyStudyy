@@ -11,7 +11,7 @@
 
 	<?php require("header.php") ?>
 
-	<div class="container">
+	<!--<div class="container">
 		<div class="row" >
 			<div class="jumbotron" style="border-left: 2px solid blue" >
 			  <h1 class="display-4">Hello, Bienvenu dans votre espace d'échange</h1>
@@ -89,7 +89,7 @@
 			  
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 <!--Equipe développeur -->
 <!-- Team -->
@@ -239,6 +239,8 @@
 	    <div class="col-sm">
 	      <h3>A propos de nous</h3>
 	      <p>Samba GUEYE, étudiant en MIAGE à l'université de Toulouse</p>
+          <p>Sophia NACHIN, étudiante en MIAGE à l'université de Toulouse</p>
+          <p>Filiz KARA, étudiante en MIAGE à l'université de Toulouse</p>
 	    </div>
 	    <div class="col-sm">
 	      <h3>Contacts</h3>

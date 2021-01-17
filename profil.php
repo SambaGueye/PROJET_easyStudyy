@@ -21,11 +21,7 @@ $idd=$_SESSION['id'];
 		$donnees=$image->fetch();
   ?>
   <br>
-<<<<<<< HEAD
-  <div class="container">
-=======
   <div class="container" id="mainProfil">
->>>>>>> d71398ca8e865a038e870ae8063894a080fd82db
     <div class="row">
       <div class="col-sm-12 col-lg-4 col-md-12 " style="text-align: center;">
         <div class="card card-profile" >
@@ -84,16 +80,7 @@ $idd=$_SESSION['id'];
         <div class="card-body">
           <form>
             <div class="row">
-<<<<<<< HEAD
-              <div class="col-md-5">
-                <div class="form-group">
-                  <label class="bmd-label-floating">Company (disabled)</label>
-                  <input type="text" class="form-control" disabled>
-                </div>
-              </div>
-=======
               
->>>>>>> d71398ca8e865a038e870ae8063894a080fd82db
                 <div class="col-md-3">
                   <div class="form-group">
                     <label class="bmd-label-floating">Username</label>
@@ -148,18 +135,6 @@ $idd=$_SESSION['id'];
     </div>
   </div>
 
-<<<<<<< HEAD
-  <div class="container-fluid">
-    <div class="row">
-      <form>
-        <label>Prenom</label>
-        <input type="text">
-        <label>Nom</label>
-        <input type="text">
-      </form>
-    </div>
-  </div>
-=======
 
   <?php 
 $dbb= new PDO('mysql:host=localhost; dbname=easystudy', 'root', '');
@@ -192,7 +167,6 @@ if(isset($_POST['majPP'])){
   else echo "heyyy";
 }
 
->>>>>>> d71398ca8e865a038e870ae8063894a080fd82db
 
 ?>
 

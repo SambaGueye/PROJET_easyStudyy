@@ -1,7 +1,7 @@
 #photoo {
     width: 8em; height:8em;
     margin-top: 2em;
-    border: 3px solid red;
+    border: 3px solid white;
 }
 
 #icone {
@@ -16,6 +16,6 @@
 
 #mainProfil {
     background-image: url(../images/bg.jpg);
-    background-color: red;
+    background-color: white;
 }
 

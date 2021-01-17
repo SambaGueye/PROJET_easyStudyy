@@ -77,7 +77,7 @@
           </div>
 
           <div class="forgot">
-          <a href="#">Mot de passe oublié?</a>
+          <a href="mdp.php">Mot de passe oublié?</a>
           </div>
 
           <button type="submit" class="btn btn-primary" name="submit">Connexion</button>

@@ -10,14 +10,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Mon compte</title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<link rel="stylesheet" type="text/css" href="./style/LandingPage.css">
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body>
+<body class="LandingPage">
 	<?php require("header.php") ?>
 
 	<?php 
@@ -44,7 +43,7 @@
 		}
 	?>
 
-
+	<!-- Jumbotron -->
 	<div class="container">
 		<div class="row" >
 			<div class="col-sm-12 col-md-12 col-lg-12">
@@ -106,6 +105,8 @@
 		</div>
 	</div>
 
+
+	<!-- Carousel -->
 	<div class="container" >
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		  <ol class="carousel-indicators">
@@ -113,15 +114,25 @@
 		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 		  </ol>
+
+
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
-		      <img src="images/image.jpg" class="d-block w-100" alt="...">
+				<img src="images/online.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption">
+					<h1 class="display-2">Bienvenu dans votre espace d'échange</h1>
+					<h3>Notre objectif, c'est vous aider à mieux gérer votre temps</h3>
+					<a class="btn btn-outline-light btn-lg" href="aPropos.php" role="button">En savoir plus</a>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+						Poster une annonce
+					</button>
+				</div>
 		    </div>
 		    <div class="carousel-item">
-		      <img src="images/ln.jpg" class="d-block w-100" alt="...">
+		      <img src="images/graduation.jpg" class="d-block w-100" alt="...">
 		    </div>
 		    <div class="carousel-item">
-		      <img src="images/bu.jpg" class="d-block w-100" alt="...">
+		      <img src="images/imgOrdi.jpg" class="d-block w-100" alt="...">
 		    </div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -134,8 +145,9 @@
 		  </a>
 		</div>
 	</div>
-</div>
-
+	
+	
+	<!-- breacrumb (SERT A RIEN) -->
 	<div class="container">
 		<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb">
@@ -146,6 +158,8 @@
 		</nav>
 	</div>
 
+
+	<!-- Catégorie -->
 	<div class="container">
 		<h3> Catégories </h3>
 		<div class="row justify-content-center">
@@ -252,16 +266,39 @@
 
 	<br>
 
+
+	<!-- Dernier posts -->
 	<div class="container">
 		<h3> Derniers posts </h3>
 		<br>
 
 		<div class="list-group">
-			<?php 
+			<?php 			
+				/* Get the current page number */
+				if (isset($_GET['pageno'])) {
+				    $pageno = $_GET['pageno'];
+				} else {
+				    $pageno = 1;
+				}
+			 
+				/* Number of rows display */
+				$nbLignesParPages = 5;
+				$decalage = ($pageno-1) * $nbLignesParPages; 
+				
+				/* total number of page */
+				$total_pages_request = $pdo->prepare("SELECT COUNT(*) FROM annonces;");
+				$total_pages_request->execute();
+				
+				$total_pages_result = $total_pages_request->fetchColumn(); /* conversion pdo to int */
+				
+				$total_pages = ceil($total_pages_result / $nbLignesParPages);
+				
+
 				$requete = $pdo->prepare("SELECT a.titre, a.description, a.niveau, a.dateEtHeure, m.prenom, m.nom
 										  FROM annonces a, membre m
 										  WHERE a.idUser = m.idUser 
-										  ORDER BY a.dateEtHeure DESC;");
+										  ORDER BY a.dateEtHeure DESC
+										  LIMIT $decalage, $nbLignesParPages;");
 
 				/* execution de requête */
 				$requete->execute();
@@ -321,17 +358,19 @@
 
 	<br>
 
+	<!-- Pagination -->
+	<!-- essayer de voir comment disable next -->
 	<div class="container">
 		<nav aria-label="Page navigation example">
 			<ul class="pagination justify-content-center">
-				<li class="page-item disabled">
-			  		<a class="page-link" href="#" tabindex="-1" aria-disabled="true">	Previous</a>
+				<li class="<?php if($pageno <= 1){ echo 'page-item disabled'; } ?>">
+			  		<a class="page-link" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?id=".$_GET['id']."&pageno=".($pageno - 1); } ?>" tabindex="-1" aria-disabled="true">	Previous</a>
 				</li>
-					<li class="page-item"><a class="page-link" href="#">1</a></li>
-					<li class="page-item"><a class="page-link" href="#">2</a></li>
-					<li class="page-item"><a class="page-link" href="#">3</a></li>
-			    	<li class="page-item">
-					<a class="page-link" href="#">Next</a>
+				<li class="page-item active">
+					<span class="page-link"><?php echo $pageno ?></span>
+				</li>
+				</li class="<?php if($pageno >= $total_pages){ echo 'page-item disabled'; }?>">
+					<a class="page-link" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?id=".$_GET['id']."&pageno=".($pageno + 1); } ?>">Next</a>
 				</li>
 			</ul>
 		</nav>
