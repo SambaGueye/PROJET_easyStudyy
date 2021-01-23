@@ -33,11 +33,11 @@
         <li class="nav-item">
           <a class="nav-link active" href="#"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Notes-Résultats</a>
         </li>
-        <li class="nav-item">          
-          <a class="nav-link active" href="#"><i class="fa fa-list-alt fa-fw"></i>&nbsp; Quiz-Révisions</a>
+        <li class="nav-item">
+          <a class="nav-link active" href="profil.php?id=<?php echo $_SESSION['id'] ?>"><i class="fa fa-user fa-fw "></i>&nbsp; Profil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="profil.php"><i class="fa fa-user fa-fw "></i>&nbsp; Profil</a>
+          <a class="nav-link active" href="Annuaire.php?id=<?php echo $_SESSION['id'] ?>"><i class="fas fa-address-card"></i>&nbsp; Annuaire</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="aPropos.php"><i class="fa fa-info fa-fw"></i>&nbsp;À propos de nous</a>

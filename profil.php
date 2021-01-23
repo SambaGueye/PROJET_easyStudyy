@@ -7,7 +7,7 @@ $idd=$_SESSION['id'];
 <head>
 	<title></title>
   <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style/profil.css">
+  <link rel="stylesheet" type="text/css" href="style/styleProfil.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -24,7 +24,7 @@ $idd=$_SESSION['id'];
   <div class="container" id="mainProfil">
     <div class="row">
       <div class="col-sm-12 col-lg-4 col-md-12 " style="text-align: center;">
-        <div class="card card-profile" >
+        <div class="card carte card-profile" >
             <div class="card-avatar">
               <a href="javascript:;">
                   <?php if(!empty($donnees['avatar'])) { ?>

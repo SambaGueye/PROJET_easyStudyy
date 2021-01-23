@@ -488,4 +488,6 @@
 
 </body>
 </html>
-<?php }} ?>
+<?php }} else { 
+	header('location:connexion.php');
+}?>

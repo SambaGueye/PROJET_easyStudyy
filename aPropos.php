@@ -1,3 +1,7 @@
+<?php
+session_start(); 
+$idd=$_SESSION['id'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
